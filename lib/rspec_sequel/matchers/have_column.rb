@@ -14,6 +14,7 @@ module RspecSequel
 
         # check column existance
         col = db.schema(c.table_name).detect{|col| col[0]==attribute}
+        puts "col = [#{col.inspect}]"
         matching = !col.nil?
 
         # bail out if no such column
